@@ -1,4 +1,4 @@
-const { temp } = require('../model/temp.model');
+const { temp } = require('../models/temp.model');
 
 var render=(req,res)=>{
 temp.find({},(err,data)=>{
