@@ -1,17 +1,17 @@
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+var mongoose=require('mongoose');
+var Schema=mongoose.Schema;
 
-var tempSchema = new  Schema({
-    temp : Number,
-    humi : Number,
-    year : Number,
-    month : Number,
-    day : Number,
-    hour : Number,
-    min : Number
+var tempSchema=new Schema({
+    temperature: Number,
+    humidity: Number,
+    year: Number,
+    month: Number,
+    day: Number,
+    hour: Number,
+    minute: Number
 });
 
-const temp = mongoose.model('temp',tempSchema);
+const temp=mongoose.model('temp_rtc',tempSchema);
 module.exports={
     temp
 }

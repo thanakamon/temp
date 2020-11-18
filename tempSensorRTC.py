@@ -2,7 +2,7 @@ import sys
 import Adafruit_DHT
 import busio
 import adafruit_ds3231
-import requests
+import requestsp
 
 from board import *
 
@@ -15,15 +15,15 @@ while True:
     humidity, temperature = Adafruit_DHT.read_retry(11,24)
     if humidity is not None and temperature is not None:
         tempSensorRTC={
-            "temp": temperature,
-            "humi": humidity,
+            "temperature": temperature,
+            "humidity": humidity,
             "year": t.tm_year,
             "month": t.tm_mon,
             "day": t.tm_mday,
             "hour": t.tm_hour,
-            "min": t.tm_min
+            "minute": t.tm_min
         }
-        res=requests.post('http://localhost:3008/add',temp)
+        res=requests.post('http://localhost:3008/addData',tempSensorRTC)
         print(res) 
         #print(str(humidity)+"% "+str(temperature)+"*C")
         #print(rtc.datetime)

@@ -1,0 +1,24 @@
+{
+  "name": "temp_rtc",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Thanakamon Intharasuriyawong <thanakamonmay@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/thanakamon/TempRTC",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.4",
+    "chart.js": "^2.9.4",
+    "angular-chart.js": "^1.1.1",
+    "moment": "^2.29.1",
+    "angular-datatables": "0.6.2"
+  }
+}
